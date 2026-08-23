@@ -1,0 +1,28 @@
+This file OPTS THIS REPOSITORY IN to the ledger pipeline.
+
+Without it, posttooluse_ledger_candidate.sh records nothing and
+userpromptsubmit_ledger_drain.sh has nothing to hand over.
+
+THE DEFAULT IS NOW ON (owner directive, 2026-08-23), and this file's previous body said the
+opposite: "Enabling is therefore always a deliberate, per-repository act. Nothing in this stack
+creates this file automatically, and nothing should." That was already false when it was written
+-- `repo_scaffold.py --profile minimal` copies this file into every new repository, measured by
+scaffolding one. A marker documenting a policy its own generator had retired is corrected here
+rather than restored.
+
+THE OLD DEFAULT'S REASON STILL BINDS FOR SOME REPOSITORIES, and it was a measurement, not a
+worry: a lesson written into a student-facing repository is pushed where students read it. So
+"default on" is not "everywhere". The authority is a single committed file:
+
+    claude-agent-stack/GLOBAL-INFO/LESSONS/roster.txt
+
+It carries [arm], [no-arm] and [no-contribute] sections with a reason on every denial, and
+`doctor.py::check_lesson_roster` checks BOTH directions -- a listed repo missing its marker, and
+a denied repo that has one. Edit the roster, not this file: deleting this copy turns capture off
+for this repository alone and the roster check will then report it as drift, which is the
+intended way to notice.
+
+WHAT IS CAPTURED, so this is not a blank cheque: nothing is written without the model being
+asked and answering. The hook only leaves a marker that something happened; the model rules on
+the next prompt, "no entry" is a first-class answer, and `ledger.py` REFUSES an entry that fails
+its predicates rather than warning about it.
