@@ -30,3 +30,12 @@ __pycache__/
 # Literature PDF corpus — re-downloadable from
 # ownerDocs/myLiterature/MANIFEST.yaml, which STAYS tracked.
 **/myLiterature/pdfs/*.pdf
+
+# CortexMark/docling conversion bundles drawn from the literature hub — LOCAL ONLY, never on a
+# remote (owner directive). `lit-atlas` lands one directory per work here, each holding the PDF,
+# the converted paper.md and its chunk bundle; that is DERIVED payload, reproducible by re-running
+# the transfer, so the repository carries the source and the command, never the output. The
+# manifest beside it STAYS tracked and is the durable record of what was drawn.
+ownerDocs/myLiterature/pdf-md/**
+!ownerDocs/myLiterature/pdf-md/
+!ownerDocs/myLiterature/pdf-md/.gitkeep
