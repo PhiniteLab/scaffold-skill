@@ -17,27 +17,35 @@ guesswork.
 
 ---
 
-**Last updated:** <!-- YYYY-MM-DD --> · **Updated by:** <!-- owner | Claude, owner-approved -->
+**Last updated:** 2026-08-30 · **Updated by:** agent
 
 ## Now
 
-<!-- The one thing in progress. Not a list of everything open — the thing that would move
-     the claim forward if it finished today. -->
+No active work in progress is recorded in this repository (`tasks/todo.md` is empty). The
+standing objective is custodial: remain the versioned source of the `popperian-coding` skill
+in the exact state that the companion controlled-evaluation paper (arXiv:2606.06454) studied
+and reported on (`PAPER.yml`: `role: studied-artifact`).
 
 ## Last verified state
 
-<!-- What was actually run, when, and what it produced. A command and its result, not a
-     description of intent. If nothing has been run since the last entry, say that. -->
+| Result | Command / evidence |
+| --- | --- |
+| `7f5ca9e` (HEAD commit, 2026-08-29 20:55:07 +0300) | `git log -1 --format=%h' '%ci` |
+| Target resolves to 4 commands (`compileall`, three `--help` invocations, an echo) | `make -n smoke` |
+| Target resolves: `python3 scripts/check_paths.py` | `make -n check-paths` |
+
+No engineering commands (`ruff`, `pyright`, an actual `make smoke` run) were executed in this
+pass — only the three dry-run/inspection rows above were actually run and observed.
 
 ## Next
 
-<!-- The next two or three concrete actions, in order. -->
+No open actions recorded in this repository. `tasks/todo.md` is empty; no `TODO` or open
+item was found in `CHANGELOG.md`, `README.md`, `SKILL.md`, or `PAPER.yml`.
 
 ## Open questions awaiting the owner
 
-<!-- Decisions an agent must not make alone. Move each to DECISIONS.md once settled. -->
+None currently recorded.
 
 ## Parked
 
-<!-- Deliberately not being worked on, with the reason and the trigger that would revive
-     it. A parked item with no trigger is an abandoned item; say so instead. -->
+None recorded.

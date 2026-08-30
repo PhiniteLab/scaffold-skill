@@ -1,31 +1,25 @@
 # Decisions
 
-**Why this repository is the way it is.** One entry per decision that would otherwise be
-re-litigated: a method choice, a baseline, an architecture, a scope boundary, a rejected
-alternative.
+This append-only file records choices that would otherwise be re-litigated. A decision is
+not a result or a method specification. Results belong in `myProgression/`; method content
+belongs in `myMethods/`.
 
-> Owner-owned, append-only. Created once by the scaffold, never overwritten, never touched
-> by `--sync`. Claude may draft an entry when a decision is settled in session; the owner
-> approves it. A decision recorded without its rationale is worth nothing later — the
-> **Why not** line is the part that stops the same argument from happening twice.
+## Entry format
 
-**What belongs here vs. elsewhere:** a *decision* (chose A over B, for a reason) belongs
-here. A *result* (the run produced 0.83) belongs in `myProgression/`. A *specification*
-(how the method works) belongs in `myMethods/`.
+Replace `D-XXX` with the next unused stable ID, then copy the block below for each new
+decision. Never renumber or rewrite a settled entry. A later decision declares which
+earlier IDs it supersedes; the earlier entry remains unchanged.
 
----
-
-## D-001 — <title>
+```text
+## D-XXX — <Decision Title>
 
 - **Date:** <!-- YYYY-MM-DD -->
-- **Decision:** <!-- what was chosen, stated so someone can act on it -->
-- **Why:** <!-- the reason that actually drove it -->
-- **Why not the alternatives:** <!-- what was rejected and what it would have cost.
-      This line is the reason the file exists. -->
+- **Decision:** <!-- actionable choice -->
+- **Rationale:** <!-- reason that drove the choice -->
+- **Rejected alternatives:** <!-- alternatives and their costs or failure modes -->
+- **Affected areas:** <!-- repository-relative paths, claims, methods, or work units -->
 - **Reversibility:** <!-- reversible | costly to reverse | one-way door -->
-- **Evidence:** <!-- what was measured, or "decided without measurement" — say which -->
-- **Revisit if:** <!-- the observation that should reopen this. "never" is allowed. -->
-
-<!-- Copy the block above for D-002, D-003, ... Never renumber; never rewrite a settled
-     entry. A decision that was later reversed gets a NEW entry that supersedes it, and a
-     one-line "superseded by D-0NN" appended to the old one. -->
+- **Evidence:** <!-- measured evidence or "decided without measurement" -->
+- **Revisit if:** <!-- observation that should reopen the decision -->
+- **Supersedes:** none
+```
