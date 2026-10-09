@@ -39,3 +39,6 @@ __pycache__/
 ownerDocs/myLiterature/pdf-md/**
 !ownerDocs/myLiterature/pdf-md/
 !ownerDocs/myLiterature/pdf-md/.gitkeep
+
+# Claude Code local project state (settings, scratch); never tracked.
+.claude/

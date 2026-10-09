@@ -76,6 +76,8 @@ FROZEN_DIR_COMPONENTS = frozenset({
 })
 # Never worth scanning.
 SKIP_DIR_COMPONENTS = frozenset({
+    ".claude",  # 2026-09-08: git-ignored (.gitignore); stale Workflow worktrees under
+    # .claude/worktrees/ still carry the pre-move layout and are not repository content
     ".git", ".venv", "venv", "node_modules", "__pycache__", ".mypy_cache",
     ".pytest_cache", ".ruff_cache", ".hypothesis", ".egg-info", "dist", "build",
     ".scratch", "site-packages",
