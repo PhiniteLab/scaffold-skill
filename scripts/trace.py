@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Run-trace writer for Inv-6.
 
 Appends events as JSONL to a configurable trace file. Each event is a

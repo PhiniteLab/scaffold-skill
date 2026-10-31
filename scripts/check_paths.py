@@ -181,7 +181,7 @@ def escapes_repo(line: str, needle: str) -> bool:
         if not token:
             continue
         # Absolute reference to the old location.
-        if token.startswith("/") or token.startswith("~/"):
+        if token.startswith(("/", "~/")):
             return True
         # Parent-escaping reference: ../<needle> or deeper.
         if re.search(r"(^|/)\.\./(?:[^/]*/)*" + re.escape(needle), token):

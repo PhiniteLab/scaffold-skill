@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Structural-MDL ad hoc rescue detector.
 
 Implements the test for Inv-4: a revision H' of a refuted H is permitted
